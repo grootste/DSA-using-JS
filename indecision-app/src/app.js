@@ -12,7 +12,21 @@ var template =(
     </ol> 
 </div>
 );
-var appRoot = document.getElementById('app');
 
-ReactDOM.render(template, appRoot);
+var userName = 'Singh';
+var userAge = 24;
+var userLocation = 'Thimi'
+var templateTwo = (
+    <div>
+        <h1> {userName.toUpperCase()} </h1>
+        <p> Age: {userAge} </p>
+        <p> Location: {userLocation}</p>
+    </div>
+);
+//var appRoot = document.getElementById('app');
+var appRootTwo = document.getElementById('appTwo');
+
+//ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRootTwo);
+
 
