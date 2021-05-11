@@ -24,20 +24,22 @@ var user = {
     age : 24,
     location : 'Madhyapur Thimi'
 };
-var userName = 'Singh';
-var userAge = 24;
-var userLocation = 'Thimi'
+
+function getLocation(location) {
+    if(location){
+        return <p>Location: {location}</p>;
+    }
+}
 var templateTwo = (
-    <div>
-        <h1> {user.name} </h1>
-        <p> Age: {user.age} </p>
-        <p> Location: {user.location}</p>
+    <div> 
+        <h1> {user.name ? user.name : 'Anonymous'} </h1>
+         {(user.age && user.age >= 18) && <p> Age: {user.age}</p>}
+        {getLocation(user.location)}
     </div>
 );
-var appRoot = document.getElementById('app');
-//var appRootTwo = document.getElementById('appTwo');
 
-ReactDOM.render(template, appRoot);
-//ReactDOM.render(templateTwo, appRootTwo);
+var appRoot = document.getElementById('app');
+ReactDOM.render(templateTwo, appRoot);
+
 
 
