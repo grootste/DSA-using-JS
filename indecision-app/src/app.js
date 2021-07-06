@@ -4,7 +4,8 @@ console.log('App.js is running!!')
 
 var app = {
     title: 'Indecision App',
-    subtitle: 'Put you hands in the life of you computer '
+    subtitle: 'Put you hands in the life of you computer ',
+    
 };
 
 var template =(
